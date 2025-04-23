@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume 2</title>
+    <link rel="icon" href="../images/loader_image.png" type="images/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+            color-adjust: exact !important;               /*  Firefox 48 – 96 */
+            print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+        }
+        body{
+            font-family: 'poppinsregular' !important;
+            overflow: hidden;
+            background-color: #f3f2f2;
+        }
+        .loader{
+            width: 100%;
+            height: 100vh;
+            background: #000000e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999999;
+            animation-timing-function: linear;
+            animation:  loader_image 2s infinite;
+        }
+        .loader_image{
+            width: 120px;
+            position: relative;
+            z-index: 99999;
+            background: white;
+            border-radius: 50%;
+            height: 120px;
+            padding: 10px;
+        }
+
+        .loader_image::after {
+            width: 140px;
+            aspect-ratio: 1 / 1;
+            border-top: 4px solid red;
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            border-radius: 50%;
+            transform-origin: center;
+            animation: loder_border_rotate 1s infinite;
+            animation-timing-function: linear;
+        }
+        .loader img{
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+        .scholhight {
+            font-weight: 600;
+        }
+        @keyframes loader_image {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.2;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+        @keyframes loder_border_rotate {
+            0%{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
+            100%{
+                transform: translate(-50%,-50%) rotate(360deg);
+            }
+        }
+        :root{
+            --color1: #fff;
+            --color2: #000;
+            ---bg-colo1: #fff;
+            --heading-font1: 14px;
+            --heading-list1: 11px;
+        }
+        .experience_clone1 .remove_experience_area, .education_clone1 .remove_education_area{
+            width: 22px;
+            text-align: center;
+            font-size: 20px !important;
+            height: 22px;
+            line-height: 20px;
+        }   
+        .bi-plus-lg{
+            cursor: pointer;
+        }
+        ul.input_value_append8 li {
+            color: blue !important;
+            cursor: pointer;
+            list-style: disc !important;
+            margin-left: 14px;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .w-55{
+            width: 55%;
+            padding-right: 10px;
+        }
+        .w-20{
+            width: 20%;
+            padding-right: 10px;
+        }
+        .w-15{
+            width: 15%;
+            padding-right: 10px;
+        }
+        .w-10{
+            width: 10%;
+            padding-right: 10px;
+        }
+        .fw-bold{
+            font-weight: bold !important;
+        }
+        .fw-normal{
+            font-weight: normal !important;
+        }
+        .mb-10{
+        margin-bottom: 10px !important;
+        }
+        .mb-20{
+            margin-bottom: 20px !important;
+        }
+        .d-block{
+            display: block !important;
+        }
+        .d-none{
+            display: none !important;
+        }
+        .fs-14{
+            font-size: 14px;
+        }
+        .static{
+            position: static !important;
+            border-radius: 2px !important;
+            margin-bottom: 15px !important;
+            margin-top: -7px !important;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .loader{
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999999;
+        }
+        .loader img{
+            width: 100px;
+        }
+
+        .container{
+            width: 100%;
+            max-width: 1320px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: auto;
+        }
+        .border1{
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        /* .main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        } */
+
+        .left_section{
+            width: 400px;
+            height: 100vh;
+            padding: 15px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            transition: 0.5s;
+            position: fixed;
+            left: 0;
+            box-shadow: 0 0 5px #a9a8a8;
+            background: white;
+        }
+        .left_section.hide_section{
+           left: -400px;
+        }
+        .form_control.logo_head{
+            color: red;
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+    background: #ffffff;
+    margin-top: -15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px #726f6f;
+    position: sticky;
+    top: -15px;
+    z-index: 99;
+    gap: 10px;
+    text-transform: uppercase;
+        }
+        .form_control.logo_head img {
+    max-width: 180px;
+    vertical-align: top;
+}
+        .form{
+            width: 100%;
+        }
+        .form_control{
+            width: 100%;
+        }
+        .form_main{
+            width: 100%;
+            display: flex;
+            gap: 10px;
+        }
+        .form_control h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            color: #15108c;
+        }
+        .form_control label{
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(15, 11, 11);
+        }
+        .form_control label span{
+            color: red;
+        }
+        .form_input{
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 10px 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 13px;
+            color: #000;
+        }
+        .form_textarea{
+            width: 100%;
+            height: 90px;
+            margin: 5px 0 15px 0;
+            padding: 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 13px;
+            color: #000;
+            overflow-x: hidden;
+        }
+        .form_input_container{
+            position: relative;
+        }
+        .form_input_container button{
+            position: absolute;
+            top: 5px;
+            right: 0;
+            padding: 0 15px;
+            height: 40px;
+            background: #163853;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 0 2px 2px 0;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .form_input_container button:hover{
+            background: rgb(216, 4, 4);
+        }
+        .tag_box_border{
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 5px;
+            margin: 8px 0;
+            position: relative;
+        }
+        .tag_box_border::after{
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            content: "\f00d";
+            font-family: fontAwesome;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            background: #F8D7DA;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .graphic_skill_item{
+            width: auto;
+            position: relative;
+            display: inline-block;
+        }
+        .tag_box{
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px 30px 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .tag_box::after{
+            position: absolute;
+            top: 9px;
+            right: 8px;
+            content: "X";
+            font-weight: bold;
+        }
+        .list_item_hide{
+            display: none !important;
+        }
+
+
+        .right_section{
+            width: calc(100% - 400px);
+            padding: 0;
+            z-index: 99999;
+            transition: 0.5s;
+            float: right;
+            margin-top: 20px;
+        }
+        .right_section.hide_section{
+           width: calc(100% - 0px);
+        }
+        .resume_main{
+            width: 100%;
+            box-shadow: 0 0 3px #ddd;
+            padding: 0;
+            position: relative;
+            background: #fff;
+            max-width: 650px;
+            margin: auto;
+
+        }
+        .resume_form_control{
+            width: 100%;
+            display: flex;
+        }
+        .left_content{
+            width: 35%;
+            padding: 20px 20px 20px 20px;
+            background: #163853 !important;
+           min-height: 100%;
+        }
+        .contact_details h3{
+            font-size: var(--heading-font1);
+            font-weight: 500;
+            word-wrap: break-word;
+            word-break: break-all;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            color: var(--color1);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            letter-spacing: .3px;
+        }
+        .section1{
+            width: 100%;
+        }
+        .content1{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .content1 label{
+            display: inline-block;
+            min-width: 10px;
+            font-size: 12px;
+            color: var(--color1);
+        }
+        .content1 span{
+            word-break: break-all;
+            text-decoration: none;
+            font-size: var(--heading-list1);
+            font-family: sans-serif;
+            color: #000;
+            display: inline-block;
+        }
+        .image_section{
+            justify-content: center;
+            position: relative;
+            gap: 0 !important;
+        }
+        
+        .image_main{
+            width: 120px;
+            aspect-ratio: 1 / 1;
+            border: 2px solid #ddd;
+            background: #ddd;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .image_main::after{
+            position: absolute;
+            bottom: 0;
+            right: -5px;
+            content: "\F219";
+            font-family: bootstrap-icons;
+            min-width: 35px;
+            min-height: 35px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #163853;
+            cursor: pointer;
+            font-size: 17px;
+            line-height: 23px;
+            box-sizing: border-box;
+         }
+        .image_section_main{
+            position: relative;
+        }
+        .image_inputs{
+            width: 120px;
+            z-index: 9999;
+            position: absolute;
+            top: 0;
+            left: 0;
+            aspect-ratio: 4 / 4.5;
+            opacity: 0;
+            right: 0;
+            margin: auto;
+            cursor: pointer;
+        }
+        .image_inner{
+            width: 100%;
+            height: 100%;
+        }
+        .image_inner img{
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .gap2{
+            gap: 5px !important;
+            color: var(--color1);
+        }
+        .white1{
+            color: #fff !important;
+        }
+        .black1{
+            color: #000 !important;
+        }
+        .editTextList{
+            position: relative;
+        }
+        .edit_list_item{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+        .list_item_show:hover .edit_list_item{
+            display: block;
+        }
+        .new_list_add{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .new_list_add i{
+            font-size: 12px;
+            padding-top: 3px;
+        }
+        .section2{
+            width: 100%;
+            padding-bottom: 10px;
+        }
+        .heading{
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .heading h3{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .content_box_section{
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .content_box_section h3{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-right: 15px;
+            border-bottom: 1px solid #ddd;
+
+        }
+        .content_box_section span{
+            font-size: var(--heading-font1);
+            font-weight: 500;
+            word-wrap: break-word;
+            word-break: break-all;
+            margin-right: 15px;
+            margin-bottom: 3px;
+            color: var(--color1);
+            padding-bottom: 3px;
+            letter-spacing: .3px;
+        }
+        .content_box_section ul{
+            width: 100%;
+            list-style-position: inside;
+        }
+        .content_box_section ul li{
+            width: 100%;
+            margin-bottom: 5px;
+            padding-right: 15px;
+            font-size: var(--heading-list1);
+            font-weight: 400;
+            color: var(--color1);
+            line-height: 15px;
+            
+        }
+        .edit_btn{
+            width: auto;
+            position: absolute;
+            top: -3px;
+            right: 0;
+        }
+        .dots_icon{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: #fff;
+            margin-left: auto;  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        .edit_div{
+            position: relative;
+        }
+        .edit_popup{
+            width: 100px;
+            background: #fff;
+            border-radius: 3px;
+            padding: 7px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            display: none;
+            z-index: 99999;
+            text-align: left;
+            box-shadow: 0px 0px 5px #cdcdcd;
+        }
+        .edit_text{
+            font-size: 13px !important;
+            text-transform: capitalize;
+            text-align: start;
+            cursor: pointer;
+            color: #163853;
+        }
+        .edit_text i{
+            font-size: 13px;
+            margin-right: 4px;
+        }
+        .heading ul{
+            width: 100%;
+            list-style-position: inside;
+        }
+        .heading ul li{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .heading ul li .text_content1{
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        .education{
+            width: 100%;
+        }
+        .education_details{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .education_status{
+            font-size: 14px;
+            font-weight: bold;
+        } 
+        .education_text{
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-size: var(--heading-list1);
+            color: var(--color1);
+        }
+        .education_container{
+            margin-top: 10px;
+        }
+        .education_clone1{
+            margin: 15px 0 8px 0;
+            position: relative;
+        }
+        .education_clone1 i{
+            position: absolute;
+            top: -5px;
+            right: 0;
+            color: var(--color1);
+            display: none;
+        }
+        .education_clone1:hover i{
+            display: block;
+        }
+        .experience_container{
+            margin-top: 10px;
+        }
+        .experience_clone1{
+            margin: 15px 0 8px 0;
+            position: relative;
+        }
+        .experience_clone1 i{
+            position: absolute;
+            top: -5px;
+            right: 0;
+            display: none;
+        }
+        .experience_clone1:hover i{
+            display: block;
+        }
+        .bg-color1{
+            background: var(---bg-colo1) !important;
+            color: var(--color2) !important;
+        }
+
+
+        .right_content{
+            width: 65%;
+            padding: 20px;
+        }
+        .section3{
+            width: 100%;
+            /* border-bottom: 2px solid #ddd; */
+        }
+        .personal_information{
+            width: 100%;
+            height: 108px;
+            padding-top: 20px;
+        }
+        .name{
+            font-size:  26px;
+            margin-bottom: 7px;
+            word-wrap: break-word;
+            font-weight: 500;
+        }
+        .experience_work{
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            color: gray;
+        }
+        .your_work{
+            font-size: 15px;
+            word-wrap: break-word;
+        }
+        .heading2 h3{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .description{
+            width: 100%;
+        }
+        .description_heading{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .description_content{
+            width: 100%;
+        }
+        .description_paragraph{
+            font-size: 13px;
+            font-family: sans-serif;
+            text-align: justify;
+            line-height: 18px;
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+
+        .experience{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .company_details{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .company_name{
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .company_post{
+            font-size: 13px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .working_time{
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .current_status{
+            font-size: 13px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .project{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .project_link{
+            width: 100%;
+        }
+        .project_link a{
+            display: block;
+            text-decoration: none;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        .language{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .language_text{
+            width: 100%;
+        }
+        .language_name{
+            font-size: 13px;
+            margin-right: 15px;
+        }
+
+        .qualification{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .input_field input{
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 13px;
+            color: #000;
+        }
+        .input_field input::placeholder{
+            font-size: 13px;
+        }
+        .input_field button{
+            padding: 0 15px;
+            width: auto;
+            height: 33px;
+            list-style: none;
+            line-height: 33px;
+            background: #163853;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            margin-top: 0;
+            margin-bottom: 25px;
+            white-space: nowrap;
+        }
+        .qualification_tag{
+            width: 100%;
+        }
+        .tag_box_qualification {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 13px;
+            margin: 0 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .print_btn{
+            width: 100%;
+            margin: 20px 0 0 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .print_btn i{
+            margin-right: 10px;
+        }
+        .print_btn button{
+            width: 200px;
+            padding: 10px 15px;
+            background: #163853;
+            color: #fff;
+            border: none;
+            outline: none;
+            /* box-shadow: 0 0 3px #d60d0d; */
+            border-radius: 28px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+
+        .footer_section{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .date{
+            width: 30%;
+        }
+        .date p{
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .candidate{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        .first1{
+            width: 30%;
+        }
+        .first2{
+            width: 50%;
+        }
+        .first3{
+            width: 10%;
+        }
+        .first4{
+            width: 10%;
+        }
+        .lh1{
+            line-height: 25px;
+            color: #000 !important;
+        }
+        .input_value_append6 li{
+            color: #000 !important;
+        }
+        .input_value_append7 p{
+            color: var(--color2);
+        }
+        .input_value_append8 li{
+            color: #000 !important;
+        }
+        #clone_append_container2 h3 span{
+            color: #000 !important;
+        }
+        #clone_append_container2 li{
+            color: #000 !important;
+        }
+        #clone_append_container2 span i{
+            color: #000 !important;
+        }
+        .experience_clone1 p{
+            color: var(--color2);
+        }
+        .input_value_append1 li{
+            color: #fff !important;
+        }
+        .input_value_append9 li{
+            color: #fff !important;
+        }
+        .settings{
+            width: auto;
+            position: fixed;
+            top: 10px;
+            right: -5px;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        .settings.settings_show .settings_icon{
+            display: none;
+        }
+        .settings_show{
+            transform: translateX(0) !important;
+        }
+        .settings_inner{
+            width: 100%;
+        }
+        .settings_content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 7px;
+            align-items: end;
+        }
+        .settings_content span{
+            display: flex;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 30px 0 0 30px;
+            box-shadow: 0 0 2px #b5b4b4;
+            cursor: pointer;
+            align-items: center;
+            width: 43px;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+        .settings_content span i {
+         font-size: 17px;
+         color: #163853;
+        }
+        .settings_content label {
+            font-size: 13px;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+        .settings_content span:hover {
+             width: 130px;
+        }
+        #fileInput1{
+            position: relative;
+            height: 60px;
+        }
+        input#fileInput1:after {
+            position: absolute;
+            content: "Upload Profile & show preview right side";
+            width: 100%;
+            height: 100%;
+            background: #f7f7f7;
+            left: 0;
+            top: 0;
+            border: 1px dashed #163853;
+            box-sizing: border-box;
+            text-align: center;
+            color: #163853;
+            padding-top: 20px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .btn_style1{
+            width: 55px;
+            height: 39px;
+            background: red;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn_style2{
+            padding: 3px 10px;
+            background: #ffffff;
+            color: #163853;
+            outline: none;
+            border-radius: 2px;
+            font-size: 12px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: 0.5s;
+            border: 1px solid #163853;
+        }
+        .btn_style2:hover{
+            background: #163853;
+            color: #fff;
+        }
+        .banner_popup{
+            width: 13%;
+            aspect-ratio: 2 / 3;
+            background: #000;
+            position: fixed;
+            right: 80px;
+            bottom: 40px;
+            z-index: 999999999999999999999999999;
+            box-shadow: 0 0 10px 5px #ddd;
+            border-radius: 10px;
+            display: none;
+        }
+        .banner_popup_image{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .banner_popup_image img{
+            width: 100%;
+            aspect-ratio: 2 / 3;
+        }
+        .banner_popup span{
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 30px;
+            min-height: 30px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .banner_popup span i{
+            font-size: 20px;
+            color: #fff;
+        }
+        .dots-lists, .sm-heading{
+            position: relative;
+        }
+
+        .dots-lists:after {
+            position: absolute;
+            left: 4px;
+            top: 45px;
+            width: 1px;
+            background: #163853;
+            content: "";
+            height: calc(100% - 79px);
+        }
+        .experience-lists {
+             padding-left: 17px;
+        }
+        .dots-lists .sm-heading:after {
+            position: absolute;
+            left: -16px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            background: #163853;
+            content: "";
+            border-radius: 50%;
+        }
+
+        .experiencetext .fw-bold{
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #163853;
+    margin-bottom: 3px;
+}
+.experiencetext p {
+    margin-bottom: 3px;
+}
+
+
+        @media print {
+            @page {
+                margin: 0;
+                size: A4;
+            }
+            .resume_main{
+                max-width: 100%;
+            }
+            .left_content{
+                min-height: 1120px;
+            }
+            .right_section.hide_section{
+                transform: translateX(0%);
+            }
+            body {
+                margin: 0;
+                background-color: #fff;
+            }
+            .right_section{
+                margin-top: 0;
+                box-shadow: none;
+            }
+            .edit_btn {
+                display: none;
+            }
+            .new_list_add{
+                display: none;
+            }
+            .left_section {
+                display: none;
+                padding: 0;
+            }
+            .experience_clone1 i{
+                display: none;
+            }
+            .name{
+                font-size: 35px;
+            }
+            .your_work{
+                font-size: 20px;
+            }
+            .education_clone1 i{
+                display: none;
+            }
+            .content1 span{
+                font-size: 17px;
+            }
+            .content_box_section ul li{
+                font-size: 17px;
+                line-height: 27px;
+                text-align: left;
+            }
+            .education_text{
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+            .image_main{
+                width: 80%;
+                margin-bottom: 40px;
+                position: relative;
+            }
+            .image_main::after{
+                display: none;
+            }
+            .contact_details h3{
+                font-size: 21px;
+            }
+            .content_box_section span{
+                font-size: 20px;
+            }
+            .right_section{
+                width: 100%;
+                padding: 0;
+                height: auto;
+                overflow-y: hidden;
+            }
+            .resume_main{
+                box-shadow: none;
+            }
+            .print_btn{
+                display: none;
+            }
+            .settings{
+                display: none;
+            }
+            .btn_style2{
+                display: none;
+            }
+            .edit_list_item{
+                display: none;
+            }
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .container{
+                padding: 3px;
+            }
+            .banner_popup{
+                width: 40%;
+                right: 40px;
+            }
+            .main{
+                flex-direction: column;
+            }
+            .left_section{
+                width: 100%;
+                order: 2;
+                padding: 3px;
+                transform: translateX(0);
+                display: none;
+            }
+            .dots_icon2{
+                width: 30px;
+                height: 30px;
+                display: flex;
+            }
+            .editbtn3{
+                top: -10px;
+                right: -20px;
+            }
+            .left_section.hide_section{
+               left: -400px;
+            }
+            .form_main{
+                flex-direction: column;
+            }
+            .right_section{
+                width: 100%;
+                order: 1;
+                padding: 5px;
+                transform: translateX(0);
+                margin-top: 0;
+            }
+            .right_section.hide_section{
+                transform: translateX(0);
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .main{
+                flex-direction: column;
+            }
+            .left_section{
+                width: 100%;
+                height: auto;
+            }
+            .right_section{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .right_content li.list_item_show.editTextList {
+            list-style: none;
+        }
+
+        .qualification .input_field {
+    width: 100%;
+    padding-right: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+i.bi.bi-x {
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-top: -1px;
+}
+.skillss{
+    padding-left: 12px;
+}
+.skillss li{
+    list-style: disc;
+}
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="main">
+            <div class="left_section">
+                <div class="form_section">
+                    <form id="form">
+                        <div class="form_control logo_head">
+                            <a href="../index.html">
+                                <img src="../images/logo_stckey.png" alt="">
+                            </a>
+                            <marquee scrollamount="5"><h4>Welcome To Resume Builder, Thanks for using IT Learning Resume Builder!!!, Your feedback will make something big please using and share your feedback</h4></marquee>
+                        </div>
+                    
+                        <div class="form_control">
+                            <label for="fileInput2">Profile Picture <span>*</span></label>
+                            <input type="file" name="image" class="form_input" accept=".jpg, .jpeg, .png" id="fileInput1">
+                        </div> 
+                        <div class="form_main">
+                            <div class="form_control">
+                                <label for="name1">Name<span>*</span></label>
+                                <div class="form_input_container">
+                                    <input type="text" placeholder="Please Enter name" class="form_input" id="name1">
+                                </div>
+                            </div>
+                            <div class="form_control">
+                                <label for="work1">Work Field<span>*</span></label>
+                                <div class="form_input_container">
+                                    <input type="text" placeholder="Please Enter work field" class="form_input" id="work1">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form_main">
+                            <div class="form_control">
+                                <label for="email1">Email <span>*</span></label>
+                                <input type="email" placeholder="Please Enter email" class="form_input" id="email1" maxlength="50">
+                            </div>
+                            <div class="form_control">
+                                <label for="mobile1">Mobile <span>*</span></label>
+                                <input type="tel" placeholder="Please Enter Mobile Number" class="form_input" id="mobile1">
+                            </div>
+                        </div>
+                        <div class="form_control">
+                            <label for="address1">Address <span>*</span></label>
+                            <input type="text" placeholder="Please Enter Address" class="form_input" id="address1">
+                        </div> 
+                        <div class="form_control" id="input_section5">
+                            <label class="edit_input_title">Education</label>
+                            <div class="qualification">
+                                <div class="input_field w-20">
+                                    <input type="text" placeholder="Qualification" id="input_box5a">
+                                </div>
+                                <div class="input_field w-15">
+                                    <input type="text" placeholder="Year" id="input_box5b">
+                                </div> 
+                                <div class="input_field w-55">
+                                    <input type="text" placeholder="School / Collage Name" id="input_box5c">
+                                </div>
+                                <div class="input_field w-10">
+                                    <button type="button" class="input_btn5 new_list_add btn_style" id="input_box5d">Add Education</button>
+                                </div>
+                            </div>
+                            <div class="qualification_tag input_tags5"></div>
+                        </div>
+                        <div class="form_control" id="input_section1">
+                            <label class="edit_input_title" for="input_box1">Skills</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box1" placeholder="Enter Skill">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags1"></div>
+                        </div>
+                        <div class="form_control" id="input_section9">
+                            <label class="edit_input_title" for="input_box9">Languages</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box9" placeholder="Enter Language name">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags9"></div>
+                        </div> 
+                        <div class="form_control" id="input_section6">
+                            <label class="edit_input_title" for="input_box6">Profile</label>
+                            <div class="form_input_container">
+                                <textarea class="form_textarea" id="input_box6" placeholder="Please Enter Description"></textarea>
+                            
+                                <div class="input_field w-10">
+                                    <button class="input_btn static" type="button">Add Description</button>
+                                </div>
+                            </div>
+                            <div class="input_tags6"></div>
+                        </div> 
+                        <div class="form_control" id="input_section7">
+                            <label class="edit_input_title">Experience</label>
+                            <div class="qualification">
+                                <div class="input_field w-55">
+                                    <input type="text" placeholder="Enter Company Name" id="input_box7a">
+                                </div>
+                                <div class="input_field w-20">
+                                    <input type="text" placeholder="Work / Post" id="input_box7b">
+                                </div> 
+                                <div class="input_field w-15">
+                                    <input type="text" placeholder="Time" id="input_box7c">
+                                </div>
+                                <div class="input_field w-10">
+                                    <button type="button" class="input_btn7 new_list_add btn_style">Add Experience</button>
+                                </div>
+                            </div>
+                            <div class="qualification_tag input_tags7"></div>
+                        </div>
+                        <div class="form_control" id="input_section8">
+                            <label class="edit_input_title" for="input_box8">Project</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box8" placeholder="Enter Project Link">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags8"></div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="resume_main" id="printSection">
+                    <div class="resume_form_control">
+                        <div class="left_content">
+                            <div class="section1">
+                                <div id="imageContainer">
+                                    <!-- Image section will be dynamically injected here -->
+                                </div>
+                                <div class="contact_details">
+                                    <h3 contenteditable="true">CONTACT</h3>
+                                    <div class="email_content gap2 content1">
+                                        <label><i class="bi bi-envelope-at" aria-hidden="true"></i></label>
+                                        <span class="show_email1 content_edit1 white1">naresingh@gmail.com</span>
+                                    </div>  
+                                    <div class="mobile_content gap2 content1">
+                                        <label><i class="bi bi-telephone-fill" aria-hidden="true"></i></label>
+                                        <span class="show_mobile1 content_edit1 white1">9898989898</span>
+                                    </div>  
+                                    <div class="address_content gap2 content1 content_edit1">
+                                        <label><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></label>
+                                        <span class="show_address1 white1">sector 66 Noida,India</span>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="section2">
+                                <div id="container">
+                                    <div class="content_box_section" id="focusElement5">
+                                        <h3>
+                                            <span class="edit_heading edit_title">EDUCATION</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append5">
+                                            <p class="education_text list_item_show" contenteditable="true">10th</p>
+                                            <p class="education_text list_item_show" contenteditable="true">2014</p>
+                                            <p class="education_text list_item_show scholhight " contenteditable="true">Vidhya Vihar Convant School, Gwalior</p>
+                                            <i class="bi bi-x edit_list_item" aria-hidden="true"></i>
+                                        </ul>
+                                        <div id="education_container"></div>
+                                        <span class="new_list_add" id="education_clone_btn"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="content_box_section" id="focusElement1">
+                                        <h3>
+                                            <span class="edit_heading edit_title">SKILLS</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon" id="" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append1 skillss">
+                                            <li class="list_item_show editTextList">Project Management <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Public Relations <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Teamwork <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Time Management <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Effective Communication <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Critical Thinking <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div> 
+                                    <div class="content_box_section" id="focusElement9">
+                                        <h3>
+                                            <span class="edit_heading edit_title">LANGUAGE</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append9 skillss">
+                                            <li class="list_item_show editTextList">English <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList">Hindi <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div>                                    
+                                    <div id="clone_append_container1"></div>
+                                    <button id="clone_btn1" class="btn_style2 bg-color1">Add New Section</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_content">
+                            <div class="section3">
+                                <div class="personal_information">
+                                    <h2 class="name show_name1 content_edit1">NARENDRA SINGH</h2>
+                                    <p class="your_work show_work1 content_edit1">WEB DESIGNER</p> 
+                                </div>
+                            </div> 
+                            <div class="content_box_section" id="focusElement6">
+                                <h3>
+                                    <span class="edit_heading edit_title" style="color: #000;">PROFILE</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <ul class="input_value_append6">
+                                    <li class="list_item_show editTextList lh1">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. Ut enim ad minim veniam quis nostrud exercitation.
+                                        <i class="bi bi-x edit_list_item" aria-hidden="true"></i>
+                                    </li>
+                                </ul>
+                                <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true" style="color: #000;"></i></span>
+                            </div> 
+                            <div class="content_box_section dots-lists" id="focusElement7">
+                                <h3>
+                                    <span class="edit_heading edit_title" style="color: #000;">WORK EXPERIENCE</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <div class="experience-lists">
+                                    <ul class="input_value_append7 experiencetext">
+                                        <p class="education_text list_item_show sm-heading fw-bold" contenteditable="true">Innopad Solutions, Ahmedabad</p>
+                                        <p class="education_text list_item_show" contenteditable="true">Web Designer</p>
+                                        <p class="education_text list_item_show mb-20" contenteditable="true">25/12/2017 - 11/03/2018</p>
+                                        <p class="education_text list_item_show sm-heading fw-bold" contenteditable="true">Nxtlife Technologies, Gurugram</p>
+                                        <p class="education_text list_item_show" contenteditable="true">Web Designer</p>
+                                        <p class="education_text list_item_show" contenteditable="true">12/03/2018 - PRESENT</p>
+                                        
+                                    </ul>
+                                    <div id="experience_container" class="experiencetext"></div>
+                                    <span class="new_list_add black1" id="experience_clone_btn"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        
+                            <div class="content_box_section" id="focusElement8">
+                                <h3>
+                                    <span class="edit_heading edit_title" style="color: #000;">Project</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash3" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <ul class="input_value_append8">
+                                    <li class="list_item_show editTextList">https://decoraitrade.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://www.aptaracorp.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://osrikgroup.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://aim2excel.in/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://worldsindia.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                </ul>
+                                <span class="new_list_add black1"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                            </div> 
+                            <div class="section3">
+                                <div id="clone_append_container2"></div>
+                                <button id="clone_btn2" class="btn_style2">Add New Section</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="print_btn">
+                    <button onclick="printSectionBtn()"><i class=" bi bi-download "> </i> PDF Download </button>
+                </div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="settings_inner">
+                <div class="settings_content">
+                    <span class="split_screen"><i class=" bi bi-layout-split split_screen" aria-hidden="true"></i> <label>Split Screen</label>  </span>
+                    <span onclick="toggleFullScreen()"><i class="bi bi-arrows-fullscreen"  aria-hidden="true"></i> <label>Full Screen</label> </span>
+                    <span  onclick="printSectionBtn()"><i class=" bi bi-download " aria-hidden="true"></i> <label>Download</label>  </span>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- <div class="banner_popup" id="bannerPopup">
+            <span><i class="bi bi-x popup_hides" aria-hidden="true"></i></span>
+            <div class="banner_popup_image">
+                <img src="../images/akash_placement.jpg" alt="">
+            </div>
+        </div> -->
+    </div> 
+    <div class="loader">
+        <div class="loader_image">
+            <img src="../images/loader_image.png" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../js/resume1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="icon" href="../images/loader_image.png" type="images/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+            color-adjust: exact !important;               /*  Firefox 48 – 96 */
+            print-color-adjust: exact !important;
+
+        }
+        body{
+            font-family: 'poppinsregular' !important;
+            overflow: hidden;
+        }
+        .loader{
+            width: 100%;
+            height: 100vh;
+            background: #000000e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999999;
+            animation-timing-function: linear;
+            animation:  loader_image 2s infinite;
+        }
+        .loader_image{
+            width: 120px;
+            position: relative;
+            z-index: 99999;
+            background: white;
+            border-radius: 50%;
+            height: 120px;
+            padding: 10px;
+        }
+
+        .loader_image::after {
+            width: 140px;
+            aspect-ratio: 1 / 1;
+            border-top: 4px solid red;
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            border-radius: 50%;
+            transform-origin: center;
+            animation: loder_border_rotate 1s infinite;
+            animation-timing-function: linear;
+        }
+        .loader img{
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+        @keyframes loader_image {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.2;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+        @keyframes loder_border_rotate {
+            0%{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
+            100%{
+                transform: translate(-50%,-50%) rotate(360deg);
+            }
+        }
+        :root{
+            --color1: #fff;
+            --color2: #000;
+            ---bg-colo1: #fff;
+            --heading-font1: 14px;
+            --heading-list1: 11px;
+        }
+        .mb-20{
+            margin-bottom: 20px;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .w-55{
+            width: 55%;
+            padding-right: 10px;
+        }
+        .w-20{
+            width: 20%;
+            padding-right: 10px;
+        }
+        .w-15{
+            width: 15%;
+            padding-right: 10px;
+        }
+        .w-10{
+            width: 10%;
+            padding-right: 10px;
+        }
+        .fw-normal{
+            font-weight: normal !important;
+        }
+        .mb-10{
+        margin-bottom: 10px !important;
+        }
+        .mb-20{
+            margin-bottom: 20px !important;
+        }
+        .d-block{
+            display: block !important;
+        }
+        .d-none{
+            display: none !important;
+        }
+        .fs-14{
+            font-size: 14px;
+        }
+        .static{
+            position: static !important;
+            border-radius: 2px !important;
+            margin-bottom: 15px !important;
+            margin-top: -7px !important;
+        }
+        .text-right{
+            text-align: right;
+        }
+        
+        .container{
+            width: 100%;
+            max-width: 1320px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: auto;
+        }
+        .border1{
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+
+        .left_section{
+            width: 400px;
+            height: 100vh;
+            padding: 15px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            transition: 0.5s;
+            position: fixed;
+            left: 0;
+            box-shadow: 0 0 5px #a9a8a8;
+            background: white;
+        }
+        .left_section.hide_section{
+           left: -400px;
+        }
+        .form_control.logo_head{
+            color: red;
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+    background: #ffffff;
+    margin-top: -15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px #726f6f;
+    position: sticky;
+    top: -15px;
+    z-index: 99;
+    gap: 10px;
+    text-transform: uppercase;
+        }
+        .form_control.logo_head img {
+    max-width: 180px;
+    vertical-align: top;
+}
+        .form{
+            width: 100%;
+        }
+        .form_control{
+            width: 100%;
+        }
+        .form_main{
+            width: 100%;
+            display: flex;
+            gap: 10px;
+        }
+        .form_control h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            color: #15108c;
+        }
+        .form_control label{
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(15, 11, 11);
+        }
+        .form_control label span{
+            color: red;
+        }
+        .form_input{
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 10px 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 13px;
+            color: #000;
+        }
+        .form_textarea{
+            width: 100%;
+            height: 90px;
+            margin: 5px 0 15px 0;
+            padding: 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 13px;
+            color: #000;
+            overflow-x: hidden;
+        }
+        .form_input_container{
+            position: relative;
+        }
+        .form_input_container button{
+            position: absolute;
+            top: 5px;
+            right: 0;
+            padding: 0 15px;
+            height: 40px;
+            background: #163853;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 0 2px 2px 0;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .form_input_container button:hover{
+            background: rgb(216, 4, 4);
+        }
+        .tag_box_border{
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 5px;
+            margin: 8px 0;
+            position: relative;
+        }
+        .tag_box_border::after{
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            content: "\f00d";
+            font-family: fontAwesome;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            background: #F8D7DA;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .graphic_skill_item{
+            width: auto;
+            position: relative;
+            display: inline-block;
+        }
+        .tag_box{
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px 30px 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .tag_box::after{
+            position: absolute;
+            top: 9px;
+            right: 8px;
+            content: "X";
+            font-weight: bold;
+        }
+        .list_item_hide{
+            display: none !important;
+        }
+
+
+        .right_section {
+    width: calc(100% - 400px);
+    padding: 0;
+    z-index: 99999;
+    transition: 0.5s;
+    float: right;
+    padding-top: 200px;
+}
+        .right_section.hide_section{
+            transform: translateX(-50%);
+        }
+        .resume_main{
+            width: 100%;
+            box-shadow: 0 0 10px #ddd;
+            position: relative;
+        }
+        .resume_form_control{
+            width: 100%;
+            display: flex;
+        }
+        .left_content{
+            width: 40%;
+            background-color: #decebe;
+            padding: 20px;
+        }
+        .section1{
+            width: 100%;
+            border-bottom: 2px solid #000;
+            margin-top: 200px;
+        }
+        .content1{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .content1 label{
+            display: inline-block;
+            width: 20px;
+        }
+        .content1 span{
+            word-break: break-all;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #000;
+            display: inline-block;
+        }
+        .image_section{
+            justify-content: center;
+            position: relative;
+        }
+        .image_section_main{
+            position: relative;
+            padding: 20px;
+            border: 2px solid;
+    border-radius: 50%;
+    gap: 0;
+    background-color: #decebe;
+
+        }
+        .image_inputs{
+            width: 263px;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 4 / 4.5;
+    opacity: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+        }
+        .image_main{
+            width: 263px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #ddd;
+    background: #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+        }
+        .image_main::after{
+            position: absolute;
+    bottom: 35px;
+    right: 0px;
+    content: "\F219";
+    font-family: bootstrap-icons;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #163853;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 23px;
+    box-sizing: border-box;
+        }
+        .image_inner{
+            width: 100%;
+            height: 100%;
+        }
+        .image_inner img{
+            width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+        }
+        .editTextList{
+            position: relative;
+        }
+        i.bi.bi-x {
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: -1px;
+    line-height: 0;
+}
+        .edit_list_item{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+        .list_item_show:hover .edit_list_item{
+            display: block;
+        }
+        .new_list_add{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .new_list_add i {
+    font-size: 12px;
+    padding-top: 3px;
+}
+        .section2{
+            width: 100%;
+        }
+        .heading{
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .heading h3{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .content_box_section{
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .content_box_section h3{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: bold;
+            /* text-transform: uppercase; */
+            margin-bottom: 10px;
+            padding-right: 15px;
+            border-bottom: 1px solid;
+            border-color: #000;
+        }
+        .content_box_section span {
+    font-size: var(--heading-font1);
+    font-weight: 500;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-right: 15px;
+    margin-bottom: 3px;
+    color: var(--color2);
+    padding-bottom: 3px;
+    letter-spacing: .3px;
+}
+        .content_box_section ul{
+            width: 100%;
+            list-style-position: inside;
+        }
+        .content_box_section ul li {
+    width: 100%;
+    margin-bottom: 5px;
+    padding-right: 15px;
+    font-size: var(--heading-list1);
+    font-weight: 400;
+    line-height: 15px;
+}
+        .edit_btn{
+            width: auto;
+            position: absolute;
+            top: 0px;
+            right: 0;
+        }
+        .dots_icon{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            background: #fff;
+            margin-left: auto;  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .edit_div{
+            position: relative;
+        }
+        .edit_popup{
+            width: 90px;
+            background: #fff;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            padding: 8px;
+            position: absolute;
+            top: 20px;
+            right: 8px;
+            display: none;
+            z-index: 999999;
+        }
+        .edit_text{
+            font-size: 12px !important;
+            text-transform: capitalize;
+            padding: 3px 0; 
+            text-align: end;
+            cursor: pointer;
+        }
+        .edit_text i{
+            font-size: 11px;
+            margin-right: 4px;
+        }
+        .heading ul{
+            width: 100%;
+            list-style-position: inside;
+        }
+        .heading ul li{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .heading ul li .text_content1{
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        .education{
+            width: 100%;
+        }
+        .education_details{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .education_status{
+            font-size: 14px;
+            font-weight: bold;
+        } 
+        .education_text{
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+.fw-bold {
+    font-weight: bold !important;
+}
+        .scholhight {
+    font-weight: 600 !important;
+}
+        .education_container{
+            margin-top: 10px;
+        }
+        .education_clone1{
+            margin: 15px 0 8px 0;
+            position: relative;
+        }
+        .education_clone1 i{
+            position: absolute;
+            top: -5px;
+            right: 0;
+        }
+        .experience_container{
+            margin-top: 10px;
+        }
+        .experience_clone1{
+            margin: 15px 0 8px 0;
+            position: relative;
+        }
+        .experience_clone1 i{
+            position: absolute;
+            top: -5px;
+            right: 0;
+        }
+
+
+
+        .right_content{
+            width: 60%;
+        }
+        .section3{
+            width: 100%;
+            border-bottom: 4px solid #000;
+        }
+        .b-b-2{
+            border-bottom: 2px solid #000;
+        }
+        .personal_information{
+            width: 100%;
+        }
+        .name{
+            font-size: clamp(16px, 5vw, 25px);
+            margin-bottom: 10px;
+            word-wrap: break-word;
+            font-weight: 500;
+        }
+        .experience_work{
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            color: gray;
+        }
+        .your_work{
+            font-size: clamp(8px, 4vw, 13px);
+            margin-bottom: 22px;
+            word-wrap: break-word;
+            border-bottom: 1px solid black;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .heading2 h3{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .description{
+            width: 100%;
+        }
+        .description_heading{
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .description_content{
+            width: 100%;
+        }
+        .description_paragraph{
+            font-size: 13px;
+            font-family: sans-serif;
+            text-align: justify;
+            line-height: 18px;
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+
+        .experience{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .company_details{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .company_name{
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .company_post{
+            font-size: 13px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .working_time{
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .current_status{
+            font-size: 13px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .project{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .project_link{
+            width: 100%;
+        }
+        .project_link a{
+            display: block;
+            text-decoration: none;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        .language{
+            width: 100%;
+            padding: 20px 0 15px 0;
+        }
+        .language_text{
+            width: 100%;
+        }
+        .language_name{
+            font-size: 13px;
+            margin-right: 15px;
+        }
+
+        .qualification{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .qualification .input_field {
+    width: 100%;
+    padding-right: 0;
+}
+        .input_field input{
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 2px;
+            outline: none;
+            font-size: 15px;
+            color: #000;
+        }
+        .input_field input::placeholder{
+            font-size: 13px;
+        }
+        .input_field button {
+    padding: 0 15px;
+    width: auto;
+    height: 33px;
+    list-style: none;
+    line-height: 33px;
+    background: #163853;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+        .qualification_tag{
+            width: 100%;
+        }
+        .tag_box_qualification {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 13px;
+            margin: 0 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        ul.input_value_append8 li {
+    color: blue !important;
+    cursor: pointer;
+    list-style: disc !important;
+    margin-left: 15px;
+}
+
+        .print_btn{
+            width: 100%;
+            margin: 20px 0 0 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .print_btn button {
+    width: 200px;
+    padding: 10px 15px;
+    background: #163853;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+        .footer_section{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .date{
+            width: 30%;
+        }
+        .date p{
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .candidate{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        .first1{
+            width: 30%;
+        }
+        .first2{
+            width: 50%;
+        }
+        .first3{
+            width: 10%;
+        }
+        .first4{
+            width: 10%;
+        }
+        .lh1{
+            line-height: 25px;
+        }
+        .settings{
+            width: auto;
+            position: fixed;
+            top: 10px;
+            right: -5px;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        .settings.settings_show .settings_icon{
+            display: none;
+        }
+        .settings_show{
+            transform: translateX(0) !important;
+        }
+        .settings_inner{
+            width: 100%;
+        }
+        .settings_content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 7px;
+            align-items: end;
+        }
+        .settings_content span{
+            display: flex;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 30px 0 0 30px;
+            box-shadow: 0 0 2px #b5b4b4;
+            cursor: pointer;
+            align-items: center;
+            width: 43px;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+        .settings_content span i {
+         font-size: 17px;
+         color: #163853;
+        }
+        .settings_content label {
+            font-size: 13px;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+        .settings_content span:hover {
+             width: 130px;
+        }
+        .btn_style1{
+            width: 55px;
+            height: 39px;
+            background: red;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn_style2 {
+    padding: 3px 10px;
+    background: #ffffff;
+    color: #163853;
+    outline: none;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.5s;
+    border: 1px solid #163853;
+}
+        .btn_style2:hover{
+                background: #163853;
+                color: #fff;
+        }
+        .banner_popup{
+            width: 13%;
+            aspect-ratio: 2 / 3;
+            background: #000;
+            position: fixed;
+            right: 80px;
+            bottom: 40px;
+            z-index: 999999999999999999999999999;
+            box-shadow: 0 0 10px 5px #ddd;
+            border-radius: 10px;
+            display: none;
+        }
+        .banner_popup_image{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .banner_popup_image img{
+            width: 100%;
+            aspect-ratio: 2 / 3;
+        }
+        .banner_popup span{
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 30px;
+            min-height: 30px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .banner_popup span i{
+            font-size: 20px;
+            color: #fff;
+        }
+
+
+        .p-20{
+            padding: 20px;
+        }
+        .plr-20{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .company-name {
+    position: relative;
+    margin-left: 16px;
+}
+.company-name::before {
+    content: '';
+    font-family: 'bootstrap-icons';
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    font-size: 9px;
+    color: #000;
+    width: 6px;
+    height: 6px;
+    background: #decebe;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+.ls-d{
+    color: blue !important;
+    cursor: pointer;
+    list-style: disc !important;
+    margin-left: 15px;
+}
+.icon{
+    margin-left: 15px;
+    position: relative;
+}
+.icon::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 3px;
+    font-size: 9px;
+    color: #000;
+    width: 6px;
+    height: 6px;
+    background: #decebe;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+.right_content i{
+    border-color: #ddd !important;
+}
+.ml-20 {
+    margin-left: 16px;
+}
+
+#imageContainer {
+    position: absolute;
+    top: -150px;
+    left: 0px;
+}
+.input_value_append6 .icon::before{
+    content: none;
+}
+.input_value_append6 .icon{
+    margin: 0;
+}
+.input_value_append8 .icon::before{
+    content: none;
+}
+
+
+        @media print {
+            .right_section.hide_section{
+                transform: translateX(0%);
+            }
+            body {
+                margin: 0; /* Ensure body margin is 0 for consistency */
+            }
+            .image_main::after{
+                display: none;
+            }
+            .edit_btn {
+                display: none;
+            }
+            .new_list_add{
+                display: none;
+            }
+            .left_section {
+                display: none;
+                padding: 0;
+            }
+            .right_section{
+                width: 100%;
+                padding: 0;
+                height: auto;
+                overflow-y: hidden;
+            }
+            .resume_main{
+                box-shadow: none;
+            }
+            .print_btn{
+                display: none;
+            }
+            .settings{
+                display: none;
+            }
+            .btn_style2{
+                display: none;
+            }
+            .edit_list_item{
+                display: none;
+            }
+        }
+
+        @page {
+            margin: 20px 5px 40px 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container{
+                padding: 3px;
+            }
+            .main{
+                flex-direction: column;
+            }
+            .banner_popup{
+                width: 40%;
+                right: 40px;
+            }
+            .editbtn3{
+                top: -20px;
+                right: -15px;
+            }
+            .dots_icon2{
+                width: 30px;
+                height: 30px;
+                display: flex;
+            }
+            .left_section{
+                width: 100%;
+                order: 2;
+                padding: 3px;
+                transform: translateX(0);
+                display: none;
+            }
+            .left_section.hide_section{
+                transform: translateX(0);
+            }
+            .form_main{
+                flex-direction: column;
+            }
+            .right_section{
+                width: 100%;
+                order: 1;
+                padding: 5px;
+                transform: translateX(0);
+            }
+            .right_section.hide_section{
+                transform: translateX(0);
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .main{
+                flex-direction: column;
+            }
+            .left_section{
+                width: 100%;
+                height: auto;
+            }
+            .right_section{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .right_content li.list_item_show.editTextList {
+            list-style: none;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="main">
+            <div class="left_section">
+                <div class="form_section">
+                    <form id="form">
+                        <div class="form_control logo_head">
+                            <a href="../index.html">
+                                <img src="../images/logo_stckey.png" alt="">
+                            </a>
+                            <marquee scrollamount="5"><h4>Welcome To Resume Builder, Thanks for using IT Learning Resume Builder!!!, Your feedback will make something big please using and share your feedback</h4></marquee>
+                        </div>
+                        <div class="form_control">
+                            <label for="fileInput1">Image <span>*</span></label>
+                            <input type="file" name="image" class="form_input mb-20" accept=".jpg, .jpeg, .png" id="fileInput1">
+                        </div>
+                        <div class="form_main">
+                            <div class="form_control">
+                                <label for="name1">Name<span>*</span></label>
+                                <div class="form_input_container">
+                                    <input type="text" placeholder="Please Enter name" class="form_input" id="name1">
+                                </div>
+                            </div>
+                            <div class="form_control">
+                                <label for="work1">Work Field<span>*</span></label>
+                                <div class="form_input_container">
+                                    <input type="text" placeholder="Please Enter work field" class="form_input" id="work1">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form_main">
+                            <div class="form_control">
+                                <label for="email1">Email <span>*</span></label>
+                                <input type="email" placeholder="Please Enter email" class="form_input" id="email1" maxlength="50">
+                            </div>
+                            <div class="form_control">
+                                <label for="mobile1">Mobile <span>*</span></label>
+                                <input type="tel" placeholder="Please Enter Mobile Number" class="form_input" id="mobile1">
+                            </div>
+                        </div>
+                        <div class="form_control">
+                            <label for="address1">Address <span>*</span></label>
+                            <input type="text" placeholder="Please Enter Address" class="form_input" id="address1">
+                        </div> 
+                        <div class="form_control" id="input_section1">
+                            <label class="edit_input_title" for="input_box1">Skills</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box1" placeholder="Enter Skill">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags1"></div>
+                        </div>
+                        <div class="form_control" id="input_section2">
+                            <label class="edit_input_title" for="input_box2">Graphic Skill</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box2" placeholder="Enter Graphic Skill">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags2"></div>
+                        </div> 
+                        <div class="form_control" id="input_section3">
+                            <label class="edit_input_title" for="input_box3">Knowledge Skill</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box3" placeholder="Enter Knowledge Skill">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags3"></div>
+                        </div> 
+                        <div class="form_control" id="input_section4">
+                            <label class="edit_input_title" for="input_box4">Framework & Library</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box4" placeholder="Enter Graphic Skill">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags4"></div>
+                        </div>
+                        <div class="form_control" id="input_section5">
+                            <label class="edit_input_title">Education</label>
+                            <div class="qualification">
+                                <div class="input_field w-20">
+                                    <input type="text" placeholder="Qualification" id="input_box5a">
+                                </div>
+                                <div class="input_field w-15">
+                                    <input type="text" placeholder="Year" id="input_box5b">
+                                </div> 
+                                <div class="input_field w-55">
+                                    <input type="text" placeholder="School / Collage Name" id="input_box5c">
+                                </div>
+                                <div class="input_field w-10">
+                                    <button type="button" class="input_btn5 new_list_add btn_style" id="input_box5d">Add Education</button>
+                                </div>
+                            </div>
+                            <div class="qualification_tag input_tags5"></div>
+                        </div>
+                        <div class="form_control" id="input_section6">
+                            <label class="edit_input_title" for="input_box6">Description</label>
+                            <div class="form_input_container">
+                                <textarea class="form_textarea" id="input_box6" placeholder="Please Enter Description"></textarea>
+                                <button class="input_btn static" type="button">Add Description</button>
+                            </div>
+                            <div class="input_tags6"></div>
+                        </div> 
+                        <div class="form_control" id="input_section7">
+                            <label class="edit_input_title">Experience</label>
+                            <div class="qualification">
+                                <div class="input_field w-55">
+                                    <input type="text" placeholder="Enter Company Name" id="input_box7a">
+                                </div>
+                                <div class="input_field w-20">
+                                    <input type="text" placeholder="Work / Post" id="input_box7b">
+                                </div> 
+                                <div class="input_field w-15">
+                                    <input type="text" placeholder="Time" id="input_box7c">
+                                </div>
+                                <div class="input_field w-10">
+                                    <button type="button" class="input_btn7 new_list_add btn_style">Add Experience</button>
+                                </div>
+                            </div>
+                            <div class="qualification_tag input_tags7"></div>
+                        </div>
+                        <div class="form_control" id="input_section8">
+                            <label class="edit_input_title" for="input_box8">Project</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box8" placeholder="Enter Project Link">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags8"></div>
+                        </div> 
+                        <div class="form_control" id="input_section9">
+                            <label class="edit_input_title" for="input_box9">Languages</label>
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box9" placeholder="Enter Language name">
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags9"></div>
+                        </div> 
+
+                        <!-- Original input_section -->
+                        <div class="form_control" id="input_section20"> 
+                            <label class="edit_input_title" for="input_box20">New Section</label> 
+                            <div class="form_input_container">
+                                <input type="text" class="form_input" id="input_box20" placeholder="Enter Knowledge Skill"> 
+                                <button class="input_btn" type="button">Add</button>
+                            </div>
+                            <div class="input_tags20"></div> 
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="resume_main" id="printSection">
+                    <div class="resume_form_control">
+                        <div class="left_content">
+                            <div class="section1">
+                                <div id="imageContainer">
+                                    <!-- Image section will be dynamically injected here -->
+                                </div>
+                                <div class="email_content content1">
+                                    <label><i class="bi bi-envelope" aria-hidden="true"></i></label>
+                                    <span class="show_email1 content_edit1">naresingh@gmail.com</span>
+                                </div>  
+                                <div class="mobile_content content1">
+                                    <label><i class="bi bi-telephone" aria-hidden="true"></i></label>
+                                    <span class="show_mobile1 content_edit1">9898989898</span>
+                                </div>  
+                                <div class="address_content content1 content_edit1">
+                                    <label><i class="bi bi-geo-alt" aria-hidden="true"></i></label>
+                                    <span class="show_address1">Gali no 05 Mamura sector 66 Noida</span>
+                                </div>
+                            </div>
+                            <div class="section2">
+                                <div id="container">
+                                    <div class="content_box_section" id="focusElement1">
+                                        <h3>
+                                            <span class="edit_heading edit_title">SKILLS</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append1">
+                                            <li class="list_item_show editTextList icon">HTML <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">CSS <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div> 
+                                    <div class="content_box_section" id="focusElement2">
+                                        <h3>
+                                            <span class="edit_heading edit_title">GRAPHIC SKILL</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append2">
+                                            <li class="list_item_show editTextList icon">Photoshop <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">Figma <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">Canva <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div> 
+                                    <div class="content_box_section" id="focusElement3">
+                                        <h3>
+                                            <span class="edit_heading edit_title">Knowledge Skill</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append3">
+                                            <li class="list_item_show editTextList icon">Bootstrap 5 <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">TailWind CSS <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">WordPress (Basic) <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div> 
+                                    <div class="content_box_section" id="focusElement4">
+                                        <h3>
+                                            <span class="edit_heading edit_title">FRAMEWORK & LIBRARY</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append4">
+                                            <li class="list_item_show editTextList icon">Bootstrap 5 <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">TailWind CSS <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                            <li class="list_item_show editTextList icon">WordPress (Basic) <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="content_box_section" id="focusElement5">
+                                        <h3>
+                                            <span class="edit_heading edit_title">Education</span>
+                                            <div class="edit_btn">
+                                                <p class="edit_div">
+                                                    <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                    <div class="edit_popup">
+                                                        <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </h3>
+                                        <ul class="input_value_append5">
+                                            <p class="fw-normal education_text list_item_show" contenteditable="true">10th</p>
+                                            <p class="education_text list_item_show" contenteditable="true">2014</p>
+                                            <p class="education_text fw-bold list_item_show scholhight" contenteditable="true">Vidhya Vihar Convant School, Gwalior</p>
+                                            <i class="bi bi-x edit_list_item" aria-hidden="true"></i>
+                                        </ul>
+                                        <div id="education_container"></div>
+                                        <span class="new_list_add" id="education_clone_btn"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div id="clone_append_container1"></div>
+                                    <button id="clone_btn1" class="btn_style2">Add New</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_content">
+                            <div class="section3 p-20">
+                                <div class="personal_information">
+                                    <h2 class="name show_name1 content_edit1">NARENDRA SINGH</h2>
+                                    <p class="your_work show_work1 content_edit1">WEB DESIGNER</p> 
+                                </div>
+                            </div> 
+                            <div class="content_box_section plr-20" id="focusElement6">
+                                <h3>
+                                    <span class="edit_heading edit_title">DESCRIPTION</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <ul class="input_value_append6">
+                                    <li class="list_item_show editTextList ls-n">
+                                        My strengths are that I am a quick learner, punctual and
+                                    energetic. Whatever task I take up, I put my efforts to complete
+                                    the task in time .
+                                        <i class="bi bi-x edit_list_item" aria-hidden="true"></i>
+                                    </li>
+                                </ul>
+                                <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                            </div> 
+                            <div class="content_box_section plr-20" id="focusElement7">
+                                <h3>
+                                    <span class="edit_heading edit_title">EXPERIENCE</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <ul class="input_value_append7">
+                                    <p class="education_text list_item_show fw-bold company-name contenteditable="true">Aptara, Noida</p>
+                                    <p class="education_text list_item_show ml-20" contenteditable="true">Web Designer</p>
+                                    <p class="education_text list_item_show mb-20 ml-20" contenteditable="true">3/01/2022 - PRESENT</p>
+                                    <p class="education_text list_item_show fw-bold company-name" contenteditable="true">Aptara, Noida</p>
+                                    <p class="education_text list_item_show ml-20" contenteditable="true">Web Designer</p>
+                                    <p class="education_text list_item_show ml-20" contenteditable="true">3/01/2022 - PRESENT</p>
+                                </ul>
+                                <div id="experience_container"></div>
+                                <span class="new_list_add" id="experience_clone_btn"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                            </div>
+                        
+                            <div class="content_box_section plr-20" id="focusElement8">
+                                <h3>
+                                    <span class="edit_heading edit_title">Project</span>
+                                    <div class="edit_btn">
+                                        <p class="edit_div">
+                                            <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                            <div class="edit_popup">
+                                                <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </h3>
+                                <ul class="input_value_append8">
+                                    <li class="list_item_show editTextList">https://decoraitrade.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://www.aptaracorp.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://osrikgroup.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://aim2excel.in/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">http://bhoomiai.kesug.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    <li class="list_item_show editTextList">https://worldsindia.com/ <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                </ul>
+                                <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                            </div> 
+                            <div class="section3 b-b-2 plr-20">
+                                <div class="content_box_section" id="focusElement9">
+                                    <h3>
+                                        <span class="edit_heading edit_title">Language</span>
+                                        <div class="edit_btn">
+                                            <p class="edit_div">
+                                                <i class="bi bi-three-dots-vertical dots_icon dots_icon2 fs-14" aria-hidden="true"></i>
+                                                <div class="edit_popup">
+                                                    <p class="edit_text removeButton"><i class="bi bi-trash" aria-hidden="true"></i> Remove</p>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </h3>
+                                    <ul class="input_value_append9">
+                                        <li class="list_item_show editTextList icon">English <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                        <li class="list_item_show editTextList icon">Hindi <i class="bi bi-x edit_list_item" aria-hidden="true"></i></li>
+                                    </ul>
+                                    <span class="new_list_add"><i class="bi bi-plus-lg" aria-hidden="true"></i></span>
+                                </div> 
+                                <div id="clone_append_container2"></div>
+                                <button id="clone_btn2" class="btn_style2">Add New</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="print_btn">
+                    <!-- <button onclick="downloadAsImage()">JPG Download</button> -->
+                    <button onclick="printSectionBtn()"><i class=" bi bi-download "> </i> PDF Download </button>
+                </div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="settings_inner">
+                <div class="settings_content">
+                    <span class="split_screen"><i class=" bi bi-layout-split split_screen" aria-hidden="true"></i> <label>Split Screen</label>  </span>
+                    <span onclick="toggleFullScreen()"><i class="bi bi-arrows-fullscreen"  aria-hidden="true"></i> <label>Full Screen</label> </span>
+                    <span  onclick="printSectionBtn()"><i class=" bi bi-download " aria-hidden="true"></i> <label>Download</label>  </span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="banner_popup" id="bannerPopup">
+            <span><i class="bi bi-times popup_hides" aria-hidden="true"></i></span>
+            <div class="banner_popup_image">
+                <img src="../images/akash_placement.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="loader">
+        <div class="loader_image">
+            <img src="../images/loader_image.png" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../js/resume1.js"></script>
+
+</body>
+</html>
