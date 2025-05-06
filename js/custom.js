@@ -41,6 +41,32 @@ $('.bn-slider2').slick({
     rtl: true
 });
 
+$('.learning-slider1').slick({
+  infinite: true,
+  speed: 5000,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  arrows: false,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+  cssEase: 'linear',
+});
+
+$('.learning-slider2').slick({
+  autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    arrows: false,
+    swipe: false,
+    slidesToShow: 5,
+    cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    rtl: true
+});
+
 
 
 $('[data-fancybox="gallery"]').fancybox({
