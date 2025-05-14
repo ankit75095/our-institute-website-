@@ -731,31 +731,31 @@ letter-spacing: 0.3px;
 	width: 100%;
 }
 
-.course-main1.bg-cor{
+.bg-cor{
 	background-color: #D5EFDE;
 }
 
-.course-main1.bg-cor1{
+.bg-cor1{
     background-color: #EFCBEF;
 }
 
-.course-main1.bg-cor2 {
+.bg-cor2 {
     background-color: #F2E2CA;
 }
 
-.course-main1.bg-cor3 {
+.bg-cor3 {
         background-color: #BBDBFB;
 }
 
-.course-main1.bg-cor4 {
+.bg-cor4 {
        background-color: #E7DDDE;
 }
 
-.course-main1.bg-cor5 {
+.bg-cor5 {
          background-color: #EED8E2;
 }
 
-.course-main1.bg-cor6 {
+.bg-cor6 {
 	    background-color: #FBDEBD;
 }
 
@@ -969,7 +969,7 @@ justify-content: space-between;
 }
 
 .bd-course-author .name a span{
-	color: #b0b0b0;
+	    color: #808080;
 }
 
 .bd-course-author .name a:hover span{
@@ -1101,21 +1101,159 @@ justify-content: space-between;
 }
 }
 
-.courses-top-list{
+.course-page-main{
+	width: 100%;
+	float: left;
+}
+
+.course-page-mid{
 	width: 100%;
 	display: flex;
-  margin: 40px 0;
+	/* background-color: #fff; */
+	border-radius: 16px;
 }
 
-.courses-left-list{
+.course-page-mid .course-main1{
+	width: 32%;
+	height: 278px;
+	border-radius: 16px;
+}
+
+.coursess section{
+	background-image:none;
+}
+
+.course-page-text{
+	width: 68%;
 	display: flex;
+	flex-direction: column;
+	 padding: 0px 25px;
 }
 
-.courses-left-list p{
-	color: black;
-	font-size: 17px;
-	font-weight: 600;
+.course-page-text .course-page-title a{
+	color: #00170f;
+	    font-size: 34px;
+    font-weight: 700;	
 }
+
+.course-page-text .pg-des{
+	color: #808080;
+	    font-weight: 500;
+    line-height: 24px;
+	margin: 11px 0;
+}
+
+.course-page-text .bd-bottom{
+	margin-top: 8px;
+}
+
+.course-page-text .skill-box{
+	width: 100%;
+	margin: 18px 0;
+}
+
+.course-page-text .skill-box h4{
+	color: #00170f;
+	font-size: 26px;
+    font-weight: 700;
+}
+
+
+.course-page-text .skill-box1{
+width: 100%;
+display: flex;
+margin-top: 20px;
+border-radius: 16px;
+padding:27px 0px;
+position: relative;
+}
+
+.skill-box1:after{
+	    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #e5e5e5;
+}
+
+.skill-box1 .skill-image-box{
+	width: 50%;
+	    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-box1 .skill-image-box .skill-c{
+	width: 33.3%;
+}
+.course-page-text .skill-c1{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.course-page-text .skill-c1 .skill-image{
+	
+}
+
+.course-page-text .skill-c1 .skill-image img{
+width: 41px;
+}
+
+.course-page-text .skill-c1 h4{
+color: #00170f;
+font-size: 14px;
+font-weight: 700;
+text-transform: capitalize;
+}
+
+
+.skill-box1 .skill-list{
+	width: 50%;
+}
+
+.skill-list ul li{
+	color: #808080;
+	display: flex;
+	padding-left: 17px;
+    margin: 0;
+	font-size: 16px;
+    font-weight: 500;
+	    line-height: 21px;
+	margin-bottom: 11px;
+}
+
+.skill-list ul li span{
+ min-width: 23px;
+    height: 23px;
+    color: #00db22;
+    background: rgba(6, 231, 117, 0.2);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    border-radius: 50%;
+	margin-right: 9px;
+	    transform: rotate(6deg);
+		box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
