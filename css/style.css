@@ -717,13 +717,14 @@ letter-spacing: 0.3px;
 .course-boxs{
     width: 100%;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .course-box{
-    width: 33%;
+    width: 32%;
     cursor: pointer;
+	margin-bottom: 26px;
 }
 
 .course-box-main{
@@ -734,6 +735,30 @@ letter-spacing: 0.3px;
 	background-color: #D5EFDE;
 }
 
+.course-main1.bg-cor1{
+    background-color: #EFCBEF;
+}
+
+.course-main1.bg-cor2 {
+    background-color: #F2E2CA;
+}
+
+.course-main1.bg-cor3 {
+        background-color: #BBDBFB;
+}
+
+.course-main1.bg-cor4 {
+       background-color: #E7DDDE;
+}
+
+.course-main1.bg-cor5 {
+         background-color: #EED8E2;
+}
+
+.course-main1.bg-cor6 {
+	    background-color: #FBDEBD;
+}
+
 .course-main1{
 	border-radius: 16px 16px 0 0;
     padding: 15px 15px;
@@ -742,18 +767,19 @@ letter-spacing: 0.3px;
 
 .course-main1 img{
 	width: 100%;
-    height: 100%;
+    height: 244px;
     border-radius: 12px;
     object-fit: cover;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .course-main-img{
-	position: absolute;
-	bottom: -5px;
-	width: 160px;
-	left: 50%;
-	z-index: 3;
-    transform: translateX(-50%);
+	    position: absolute;
+    bottom: 15px;
+    width: 160px;
+    right: 21px;
+    z-index: 3;
 }
 
 .course-main-img img{
@@ -772,16 +798,17 @@ letter-spacing: 0.3px;
 
 .course-main1 .lg-text{
 	position: absolute;
-	top: 37px;
-    font-weight: 500;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-	font-size: 170px;
-	color: white;
-	font-family: "Big Shoulders", sans-serif;
+	bottom: 37px;
+    left:32px;
 }
+
+.course-main1 .lg-text img{
+	width: 56px;
+	height: 56px;
+	    border-radius: 6px;
+    border: 2px solid white;
+}
+
 
 .bd-course-badge {
     position: absolute;
@@ -841,13 +868,19 @@ letter-spacing: 0.3px;
 
 .bd-course-tag a:hover{
 	background-color: #07a169;
-	color: white;
+	color: white !important;
 }
 
 .bd-course-lesson span{
 	color: #4d4d4d;
 	font-size: 14px;
 	font-family: "Roboto", sans-serif;
+}
+
+.bd-course-lesson img{
+	width: 16px;
+	vertical-align: middle;
+    margin-right: 2px;
 }
 
 .bd-a{
@@ -864,8 +897,9 @@ letter-spacing: 0.3px;
 	text-align: left;
 	color: #00170f;
 	transition: 0.3s;
-	font-family: "Roboto", sans-serif;
+	position: relative;
 }
+
 
 .course-content a:hover{
 	color: #07a169;
@@ -930,16 +964,26 @@ justify-content: space-between;
 
 .bd-course-author .name a{
 	color: #00170f;
-	font-size: 15px;
-    font-weight: 600;
-	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+    font-weight: 500;
+}
+
+.bd-course-author .name a span{
+	color: #b0b0b0;
+}
+
+.bd-course-author .name a:hover span{
+	color: #07a169;
+}
+
+.bd-course-author .name a:hover{
+	color: #07a169 !important;
 }
 
 .bd-text-btn{
 	color: #00170f;
-	font-size: 15px;
-    font-weight: 600;
-	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+    font-weight: 500;
 }
 
 .bd-text-btn .box-icon {
@@ -970,7 +1014,108 @@ justify-content: space-between;
     transform: translateX(0%);
 }
 
+.course-main-banner{
+	width: 100%;
+	float: left;
+	background-image: url(../images/banner.course.webp);
+	    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+	    padding: 88px 0px;
+		position: relative;
+}
 
+.course-mid-banner{
+	width: 100%;
+	float: left;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	h1{
+		color: black;
+		font-size: 53px;
+		font-weight: 800;
+	}
+
+	ul{
+		display:flex;
+		gap: 10px;
+		margin-top: 25px;
+		li{
+			list-style: none;
+			color: black;
+			font-size: 17px;
+			font-weight: 600;
+			margin: 0;
+			i{
+				font-size: 17px;
+			}
+			a{
+				color: black;
+                font-size: 17px;
+                font-weight: 600;
+				transition: 0.4s;
+				i{
+				font-size: 17px;
+				margin-right: 5px;
+				}
+				&:hover{
+					color: #07a169;
+				}
+			}
+		}
+	}
+
+}
+
+.course-main-banner .course-book{
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    animation: upDown 1.8s ease-in-out 1.8s forwards infinite alternate;
+    z-index: 2;
+}
+
+@keyframes upDown{
+
+	0%{transform: translateY(0px);}
+	100%{transform: translateY(-15px);}
+}
+
+.course-main-banner .course-idea{
+	position: absolute;
+    right: 200px;
+    top: 30px;
+    animation: scaleZeroOne 5s cubic-bezier(0.12, 0, 0.39, 0) 0s infinite alternate both;
+    z-index: 2;
+}
+
+@keyframes scaleZeroOne{
+0% {
+    transform: scale(0.6);
+    opacity: 0.3;
+}
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+.courses-top-list{
+	width: 100%;
+	display: flex;
+  margin: 40px 0;
+}
+
+.courses-left-list{
+	display: flex;
+}
+
+.courses-left-list p{
+	color: black;
+	font-size: 17px;
+	font-weight: 600;
+}
 
 
 
