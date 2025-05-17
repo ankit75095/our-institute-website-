@@ -14,37 +14,10 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle("toggle");
 });
 
-
-$('.bn-slider1').slick({
-  infinite: true,
-  speed: 5000,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,
-  arrows: false,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  cssEase: 'linear',
-});
-
-$('.bn-slider2').slick({
-  autoplay: true,
-    autoplaySpeed: 0,
-    speed: 5000,
-    arrows: false,
-    swipe: false,
-    slidesToShow: 4,
-    cssEase: 'linear',
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    rtl: true
-});
-
 $('.learning-slider1').slick({
   infinite: true,
-  speed: 5000,
-  slidesToShow: 5,
+  speed: 6000,
+  slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 0,
@@ -57,10 +30,10 @@ $('.learning-slider1').slick({
 $('.learning-slider2').slick({
   autoplay: true,
     autoplaySpeed: 0,
-    speed: 5000,
+    speed: 6000,
     arrows: false,
     swipe: false,
-    slidesToShow: 5,
+    slidesToShow: 6,
     cssEase: 'linear',
     pauseOnFocus: false,
     pauseOnHover: false,
