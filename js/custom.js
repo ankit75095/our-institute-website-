@@ -86,7 +86,7 @@ $('.autoplay').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplaySpeed: 2000,
-  arrows: false,
+  arrows: true,
   autoplay: false,
   dots: false,
   responsive: [
