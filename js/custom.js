@@ -25,6 +25,18 @@ $('.learning-slider1').slick({
   pauseOnFocus: false,
   pauseOnHover: false,
   cssEase: 'linear',
+  responsive: [
+    {
+     breakpoint: 992,
+       settings:{
+         slidesToShow: 4,
+       },
+        breakpoint: 767,
+       settings:{
+         slidesToShow: 2,
+       }
+    }
+  ]
 });
 
 $('.learning-slider2').slick({
@@ -37,7 +49,19 @@ $('.learning-slider2').slick({
     cssEase: 'linear',
     pauseOnFocus: false,
     pauseOnHover: false,
-    rtl: true
+    rtl: true,
+     responsive: [
+    {
+     breakpoint: 992,
+       settings:{
+         slidesToShow: 4,
+       },
+        breakpoint: 767,
+       settings:{
+         slidesToShow: 2,
+       }
+    }
+  ]
 });
 
 
@@ -101,7 +125,7 @@ $('.autoplay').slick({
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true
 
