@@ -115,6 +115,7 @@ html {
 	box-shadow: 0px 0px 3px #adadad;
 	padding: 12px 0px;
 	transition: 0.5s linear;
+	z-index: 99999;
 }
 
 .header_section.headr-stickey .logo img {
@@ -178,7 +179,7 @@ width: 100%;
 section {
 	width: 100%;
 	float: left;
-	background-image: linear-gradient(180deg, #FCF1F500 0%, #FCF1F5 80%);
+	/* background-image: linear-gradient(180deg, #FCF1F500 0%, #FCF1F5 80%); */
 	padding: 70px 0;
 }
 
@@ -972,14 +973,17 @@ del {
 	margin-top: 25px;
 	color: #fff;
 }
-
+.banner.notes p {
+    color: #777;
+}
+.banner.notes h1 {
+    color: #032d60;
+}
 .banner-img {
 	width: 40%;
 	float: right;
 	border-radius: 20px;
-	/* box-shadow: 0 0 2px #4c4b4b; */
 	overflow: hidden;
-	display: none;
 }
 
 .banner.notes .banner-img {
@@ -1388,7 +1392,7 @@ sup{
 	background-image: linear-gradient(45deg, #e35f21 0%, #e35f21 25%, #EE2C3C 100%);
 	background-clip: text;
 	color: transparent;
-	font-size: 35px;
+	font-size: 37px;
 }
 
 .sec_title h2 {
@@ -1830,12 +1834,14 @@ ul.advantages-list li a::before {
 	overflow: hidden;
     width: 33.33%;
 	position: relative;
+	height: 300px;
 }
 
 .study-resources img{
 	transition: 0.8s;
-	height: 188px;
+	height: 100%;
 	width: 100%;
+	object-fit: cover;
 }
 
 .study-resources:hover img{
@@ -1858,7 +1864,7 @@ transition: 0.8s;
 	text-align: center;
 	padding: 22px 20px;
 	position: absolute;
-	top: 0;
+	bottom: 0;
 }
 
 .study-title h2 {
@@ -2071,6 +2077,9 @@ ul.social-icon li a {
 	border-radius: 5px;
 	transition: 0.4s;
 }
+ul.social-icon li {
+    margin-left: 0;
+}
 
 ul.social-icon li a:hover {
 	background: #e35f21;
@@ -2200,8 +2209,8 @@ ul.personal-info {
 .social-icon {
 	display: flex;
 	width: 100%;
-	border-top: 1px solid #ddd;
-	padding: 16px;
+	padding: 15px;
+	gap: 15px;
 }
 
 ul.social-icon li {
@@ -2222,14 +2231,14 @@ ul.social-icon li {
 }
 
 .about-me h2 {
-	    font-size: 34px;
+	font-size: 28px;
     font-weight: 600;
-    line-height: 45px;
-    margin-bottom: 15px;
+    line-height: 37px;
+    margin-bottom: 10px;
     color: #032d60;
     text-align: left;
-	position: relative;
-	text-transform: capitalize;
+    position: relative;
+    text-transform: capitalize;
 }
 
 .about-me h2 span{
@@ -2607,11 +2616,10 @@ ul.my-exp li .fa-star-half {
 .inner-colomn .author-box p{
 font-weight:400;
 color: #808080;
-    margin-top: 12px;
 }
 
 .award-status {
-	position: absolute;
+position: absolute;
 right: auto;
 left: 0px;
 bottom: 19px;
@@ -2620,7 +2628,7 @@ box-shadow: 0 40px 60px rgba(15, 11, 44, .15);
 border-radius: 30px 10px 50px 10px;
 display: flex;
 background: #fff;
-padding: 22px 20px 18px 30px;
+padding: 20px;
 align-items: center;
 }
 
@@ -3417,7 +3425,7 @@ ul.footer-socail li a:hover {
 }
 
 .our_placement_cols_text p {
-	font-size: 16px;
+	font-size: 15px;
 	color: #666666;
 	margin-bottom: 3px;
 	margin-top: 0px;
@@ -3700,6 +3708,8 @@ textarea {
 .mobile-hadding {
 	max-width: 750px;
 	margin: auto;
+	margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .mobile-app-main {
@@ -7231,17 +7241,18 @@ gap: 33px;
 .mobile-left h2{
     font-size: 38px;
     font-weight: 600;
-    line-height: 45px;
+    line-height: 50px;
     margin-bottom: 15px;
     color: #032d60;
-	text-align: left;
-	    max-width: 450px;
+    text-align: left;
+    max-width: 450px;
+    text-transform: capitalize;
 }
 
 .mobile-left p{
 	text-align: left;
-	    max-width: 543px;
-    line-height: 22px;
+    max-width: 543px;
+    line-height: 27px;
 }
 
 .mobile-left span {
@@ -7264,7 +7275,7 @@ gap: 33px;
 }
 
 .play-store-button a img{
-    width: 114px;
+    width: 150px;
 }
 
 .mobile-img{
@@ -7490,4 +7501,12 @@ body.faq-show .faq-modal .close-faq{
 .faq-modal iframe{
 	    max-height: calc(100vh - 80px);
     max-width: 870px;
+}
+
+section:nth-child(even) {
+    background: #f3f3f3;
+}
+
+.faq-sec section{
+	padding-bottom: 0;
 }
