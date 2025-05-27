@@ -15,16 +15,16 @@ hamburger.addEventListener('click', () => {
 });
 
 $('.learning-slider1').slick({
-  infinite: true,
-  speed: 6000,
+  // infinite: true,
+  // speed: 6000,
   slidesToShow: 6,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,
-  arrows: false,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  cssEase: 'linear',
+  // autoplay: true,
+  // autoplaySpeed: 0,
+  // arrows: false,
+  // pauseOnFocus: false,
+  // pauseOnHover: false,
+  // cssEase: 'linear',
   responsive: [
     {
      breakpoint: 992,
@@ -40,9 +40,9 @@ $('.learning-slider1').slick({
 });
 
 $('.learning-slider2').slick({
-  autoplay: true,
-    autoplaySpeed: 0,
-    speed: 6000,
+  // autoplay: true,
+  //   autoplaySpeed: 0,
+  //   speed: 6000,
     arrows: false,
     swipe: false,
     slidesToShow: 6,
