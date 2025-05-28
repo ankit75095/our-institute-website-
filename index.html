@@ -1213,7 +1213,7 @@
 
 
 
-  <section id="talk">
+ <section id="talk">
     <div class="container">
       <div class="banner-talk">
         <div class="talkleft">
@@ -1223,9 +1223,42 @@
           <a class="theme-btn" href="#"><span>Get Started</span></a>
         </div>
         <div class="talkright">
-          <img src="images/talk_website.png" alt="">
+          <div class="it-talk-box-60">
+
+ <div class="it-learnimg-box">
+  
+    <div class="add-dots">
+    <div class="add-tods">
+<div class="it-photo-box adclass">
+    <img src="images/director2.jpg" alt="">
+</div>
+</div>
+</div>
+
+<div class="add-dots-1">
+<div class="add-tods-2">
+ <div class="it-photo-box">
+    <img src="images/tawk.jpg" alt="">
+</div> 
+</div>
+</div>
+
+
+  <div class="ask-qus">
+    <p class="txt-rotate wrap"
+     data-period="4000"
+     data-rotate='["आईटी लर्निंग इंस्टिट्यूट – जहाँ हो रहे हैं लगातार अनगिनत प्लेसमेंट्स!", "आईटी लर्निंग इंस्टिट्यूट जहां हर छात्र का सपना हकीकत बनता है", "यहां हर सपना बनता है एक सफलता की कहानी", "आईटी लर्निंग इंस्टिट्यूट वह संस्थान है जहाँ छात्र प्यार से सीखते हैं और मार्गदर्शन से आगे बढ़ते हैं"]'></p>
+        <!-- <p>Unlock your potential by signing up with IT Learning Institute. The most affordable </p> -->
+    </div>
+    <div class="it">
+        <p>Rahul Sir, What is IT Learning? </p>
+    </div>
+
+</div> 
+</div>
         </div>
       </div>
+
 
     </div>
   </section>
@@ -2451,6 +2484,61 @@
   <script src="js/custom.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<p class="wrap">'+this.txt+'</p>';
+
+  var that = this;
+  var delta = 100 - Math.random() * 30;
+
+  if (this.isDeleting) { delta /= 5; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  
+};
+  </script>
 
 <script>
 
